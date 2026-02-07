@@ -29,7 +29,6 @@ body{
   overflow-x:hidden;
 }
 
-/* ===== BACKGROUND PARALLAX ===== */
 .bg-parallax{
   position: fixed;
   inset: 0;
@@ -119,7 +118,6 @@ body{
   to{ transform: translate3d(-35px, -35px, 0) scale(1.06); }
 }
 
-/* HERO */
 .hero{
   min-height: 100vh;
   display:flex;
@@ -182,7 +180,6 @@ body{
   border: 1px solid rgba(139,92,246,.20);
 }
 
-/* SECTIONS */
 section{
   padding: 4rem 10%;
   background: rgba(255,255,255,0.02);
@@ -199,14 +196,12 @@ section h3{
   color: #c4b5fd;
 }
 
-/* ABOUT */
 .about p{
   max-width: 700px;
   line-height: 1.8;
   color: #ddd;
 }
 
-/* SKILLS */
 .skills-grid{
   display:flex;
   flex-wrap:wrap;
@@ -442,9 +437,6 @@ section h3{
 }
 
 
-/* ===== EDUCAÇÃO ===== */
-
-
 .education > *{
   position: relative;
   z-index: 1;
@@ -500,7 +492,6 @@ section h3{
   color: #c4b5fd;
 }
 
-/* mobile */
 @media (max-width: 600px){
   .education-list li{
     flex-direction: column;
@@ -509,7 +500,6 @@ section h3{
   }
 }
 
-/* ===== EDUCAÇÃO (instituição) ===== */
 .edu-info{
   display: flex;
   flex-direction: column;
@@ -523,7 +513,6 @@ section h3{
 }
 
 
-/* ===== EXPERIÊNCIAS ===== */
 .experience h3{
   font-size: 2rem;
   margin-bottom: 1.6rem;
@@ -535,7 +524,6 @@ section h3{
   gap: .8rem;
 }
 
-/* linha base */
 .exp-row{
   display: grid;
   grid-template-columns: 2fr 1.5fr 1fr;
@@ -559,7 +547,6 @@ section h3{
   box-shadow: 0 14px 35px rgba(139,92,246,.25);
 }
 
-/* cabeçalho */
 .exp-head{
   background: rgba(139,92,246,0.12);
   border: 1px solid rgba(139,92,246,.35);
@@ -572,7 +559,6 @@ section h3{
   font-size: .95rem;
 }
 
-/* responsivo */
 @media (max-width: 800px){
   .exp-row{
     grid-template-columns: 1fr;
@@ -589,7 +575,6 @@ section h3{
 }
 
 
-/* ===== CONTATO ===== */
 .contact h3{
   font-size: 2rem;
   margin-bottom: .8rem;
@@ -621,7 +606,6 @@ section h3{
   filter: drop-shadow(0 10px 20px rgba(139,92,246,.35));
 }
 
-/* mobile */
 @media (max-width: 600px){
   .contact-links img{
     max-width: 100%;
@@ -629,7 +613,6 @@ section h3{
 }
 
 
-/* ===== HERO NOVA (BANNER) ===== */
 .hero-new{
   position: relative;
   min-height: 95vh;
@@ -639,7 +622,6 @@ section h3{
   margin-bottom: 3rem;
 }
 
-/* imagem principal */
 .hero-banner{
   position: absolute;
   inset: 0;
@@ -653,7 +635,6 @@ section h3{
   filter: brightness(.75) contrast(1.05);
 }
 
-/* gradiente por cima */
 .hero-new::after{
   content:"";
   position:absolute;
@@ -668,7 +649,6 @@ section h3{
   z-index:1;
 }
 
-/* conteúdo */
 .hero-overlay{
   position: relative;
   z-index: 2;
@@ -691,14 +671,12 @@ section h3{
   margin-bottom: 2.2rem;
 }
 
-/* botões */
 .hero-actions{
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
 }
 
-/* efeito rasgado embaixo */
 .hero-new::before{
   content:"";
   position:absolute;

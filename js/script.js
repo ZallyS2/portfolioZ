@@ -1,6 +1,4 @@
-// script.js
 
-// ===== CARROSSEL INFINITO (3 visíveis) =====
 const track = document.getElementById("track");
 const prev = document.getElementById("prev");
 const next = document.getElementById("next");
@@ -8,17 +6,14 @@ const next = document.getElementById("next");
 let cards = Array.from(document.querySelectorAll(".project-card"));
 const visible = 3;
 
-// Clones para infinito
 const headClones = cards.slice(0, visible).map(c => c.cloneNode(true));
 const tailClones = cards.slice(-visible).map(c => c.cloneNode(true));
 
 tailClones.forEach(clone => track.insertBefore(clone, track.firstChild));
 headClones.forEach(clone => track.appendChild(clone));
 
-// Atualiza lista completa
 cards = Array.from(document.querySelectorAll(".project-card"));
 
-// Começa no "miolo"
 let index = visible;
 
 function setPosition(noAnim = false){
@@ -41,13 +36,11 @@ prev.onclick = () => {
 };
 
 track.addEventListener("transitionend", () => {
-  // quando passa do final, volta pro miolo
   if (index >= cards.length - visible) {
     index = visible;
     setPosition(true);
   }
 
-  // quando passa do começo, volta pro final do miolo
   if (index <= 0) {
     index = cards.length - visible * 2;
     setPosition(true);
@@ -55,7 +48,6 @@ track.addEventListener("transitionend", () => {
 });
 
 
-// ===== MODAL (com capa do card) =====
 const modal = document.getElementById("modal");
 const title = document.getElementById("modalTitle");
 const desc = document.getElementById("modalDesc");
