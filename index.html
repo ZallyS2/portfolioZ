@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laila Zappiello | Zally</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Fonte -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+<header class="hero-new">
+  <div class="hero-banner">
+    <img src="assets/back.png" alt="Portfolio 2026 Game Dev">
+  </div>
+
+  <div class="hero-overlay">
+    <h1>Laila Zappiello | Zally</h1>
+    <h2>Game Developer • Back-end • Game Design</h2>
+
+    <div class="hero-actions">
+      <a href="https://github.com/ZallyS2" target="_blank" class="btn">GitHub</a>
+        
+    </div>
+  </div>
+</header>
+
+  <!-- SOBRE -->
+  <section class="about">
+    <h3>Sobre mim</h3>
+    <p>
+      Sou apaixonada por desenvolvimento e programação de jogos.
+      Trabalho com C++, C#, .NET, Game Design e criação de experiências
+      interativas que unem lógica e criatividade.
+    </p>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="skills">
+    <h3>Habilidades</h3>
+
+    <div class="skills-grid">
+      <span>Unity</span>
+      <span>Unreal</span>
+      <span>C#</span>
+      <span>C++</span>
+      <span>.NET</span>
+      <span>Game Design</span>
+      <span>Back-end</span>
+    </div>
+  </section>
+
+  <!-- PROJETOS -->
+  <section class="projects">
+    <h3>Projetos</h3>
+
+    <div class="carousel-container">
+      <button class="carousel-btn left" id="prev" aria-label="Anterior">&#10094;</button>
+
+      <div class="carousel">
+        <div class="carousel-track" id="track">
+
+            <div class="project-card"
+               data-title="The Legend of Zally"
+               data-desc="Meu projeto principal, um RPG de ação inspirado em The Legend of Zelda. Desenvolvido em Unity, o jogo apresenta um mundo aberto com exploração, combate e resolução de puzzles. Estou no começo do desenvolvimento, mas o protótipo já está disponível no GitHub para quem quiser acompanhar a evolução do projeto."
+               data-tech="Unity • C# • Game Design"
+               data-link="https://github.com/ZallyS2/TLOZ">
+                 <img src="assets/tloz.png" alt="c#">
+                <h4>The Legend of Zally</h4>
+          </div>
+          <div class="project-card"
+               data-title="Entre Laços e Amassos"
+               data-desc="Visual Novel focada em narrativa e escolhas do jogador. Eu atuei como assistente de desenvolvimento, contribuindo para a implementação de mecânicas e otimização do jogo. O projeto está disponível no Google Play e AppleStore."
+               data-tech="Unity • Game Design • Narrativa"
+               data-link="https://play.google.com/store/apps/details?id=br.com.entrelacoseamassos.dog&hl=pt">
+            <img src="assets/ELA.jpg" alt="Entre Laços e Amassos">
+            <h4>Entre Laços e Amassos</h4>
+          </div>
+
+          <div class="project-card"
+               data-title="My Little Farm"
+               data-desc="Jogo de fazenda com gerenciamento e progressão. Projetinho pessoal onde desenvolvi todas as mecânicas, desde o plantio até a colheita, além de criar um sistema de progressão para manter o jogador engajado. O código é aberto e disponível no GitHub."
+               data-tech="Unity • Game Design"
+               data-link="https://github.com/ZallyS2/My-Little-Farm">
+            <img src="assets/mlf.png" alt="My Little Farm">
+            <h4>My Little Farm</h4>
+          </div>
+
+          <div class="project-card"
+               data-title="FPS Sci-Fi"
+               data-desc="Protótipo FPS futurista."
+               data-tech="Unity • FPS"
+               data-link="https://github.com/ZallyS2/FPS-SCI-Fi">
+            <img src="assets/scifi.jpeg" alt="FPS Sci-Fi">
+            <h4>FPS Sci-Fi</h4>
+          </div>
+
+          <div class="project-card"
+               data-title="Mocci"
+               data-desc="Protótipo na engine Godot."
+               data-tech="Godot"
+               data-link="https://github.com/ZallyS2/Mocchi">
+                 <img src="assets/mocci.jpeg" alt="Mocci">
+                <h4>Mocci</h4>
+          </div>
+
+           <div class="project-card"
+               data-title="Engine Java"
+               data-desc="Fiz esse projeto quando criança, foi meu primeiro contato com desenvolvimento de jogos. É uma engine simples feita em Java, onde é possível criar jogos 2D usando sprites e animações. O código é aberto e disponível no GitHub."
+               data-tech="Java"
+               data-link="https://github.com/ZallyS2/Game_Engine_A">
+                 <img src="assets/engine.jpeg" alt="EngineJava">
+                <h4>Engine Java</h4>
+          </div>
+
+
+          <div class="project-card"
+               data-title="Projeto em Angular"
+               data-desc="Esse projeto é com sites em Angular"
+               data-tech="Angular"
+               data-link="https://portfolio-zallih.vercel.app/">
+                 <img src="assets/Angular.png" alt="Angular">
+                <h4>Projeto em Angular</h4>
+          </div>
+
+        <div class="project-card"
+               data-title="Projeto em C# Back-end"
+               data-desc="Todos os meus projetos de back-end em C#"
+               data-tech="C#"
+               data-link="https://github.com/ZallyS2/dio-projects/blob/main/README.md">
+                 <img src="assets/c.png" alt="c#">
+                <h4>Projetos Back-end</h4>
+          </div>
+        </div>
+      </div>
+
+      <button class="carousel-btn right" id="next" aria-label="Próximo">&#10095;</button>
+    </div>
+  </section>
+
+  <!-- MODAL -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="close" aria-label="Fechar">&times;</button>
+
+      <div class="modal-cover">
+        <img id="modalImage" src="" alt="">
+      </div>
+
+      <h3 id="modalTitle"></h3>
+      <p id="modalDesc"></p>
+      <span id="modalTech"></span>
+      <br>
+      <a id="modalLink" target="_blank" rel="noopener">Ver projeto</a>
+    </div>
+  </div>
+
+  
+<section class="education">
+  <h3>Educação</h3>
+
+  <ul class="education-list">
+    <li>
+      <div class="edu-info">
+        <span class="edu-title">Ensino Médio</span>
+        <span class="edu-place">ETEC</span>
+      </div>
+      <span class="edu-period">2022 – 2024</span>
+    </li>
+
+    <li>
+      <div class="edu-info">
+        <span class="edu-title">Técnico em Eletrônica</span>
+        <span class="edu-place">ETEC</span>
+      </div>
+      <span class="edu-period">2022 – 2024</span>
+    </li>
+
+    <li>
+      <div class="edu-info">
+        <span class="edu-title">Ciência da Computação</span>
+        <span class="edu-place">Estácio</span>
+      </div>
+      <span class="edu-period">2025 – 2029</span>
+    </li>
+  </ul>
+</section>
+
+<section class="experience">
+  <h3>Experiências</h3>
+
+  <div class="experience-table">
+    <div class="exp-row exp-head">
+      <span>Cargo</span>
+      <span>Empresa</span>
+      <span>Tempo</span>
+    </div>
+
+    <div class="exp-row">
+      <span>Jovem Aprendiz Administrativo</span>
+      <span>Grupo Vamos</span>
+      <span>04/2025 – 07/2025</span>
+    </div>
+
+    <div class="exp-row">
+      <span>Game Dev & Game Design (Voluntário)</span>
+      <span>Instal</span>
+      <span>04/2025 – 10/2025</span>
+    </div>
+
+    <div class="exp-row">
+      <span>Game Developer (Freelance)</span>
+      <span>Doguinho Studios</span>
+      <span>10/2025 – 02/2026</span>
+    </div>
+  </div>
+</section>
+
+<section class="contact">
+  <h3>Entre em contato</h3>
+
+  <p class="contact-text">
+    Quer conversar, colaborar ou saber mais sobre meu trabalho?
+    Me chama por aqui ✨
+  </p>
+
+  <div class="contact-links">
+    <a href="https://www.instagram.com/zzappiello.o/" target="_blank">
+      <img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram">
+    </a>
+
+    <a href="mailto:lailazappiello90@gmail.com">
+      <img src="https://img.shields.io/badge/Gmail-333333?style=for-the-badge&logo=gmail&logoColor=red" alt="Gmail">
+    </a>
+
+    <a href="https://wa.me/5511981642627" target="_blank">
+      <img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp">
+    </a>
+
+    <a href="https://www.linkedin.com/in/laila-zappiello/" target="_blank">
+      <img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+    </a>
+  </div>
+</section>
+
+
+  <!-- JS -->
+  <script src="js/script.js"></script>
+</body>
+</html>
