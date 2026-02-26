@@ -300,7 +300,48 @@ section h3{
 
 .carousel-btn.left{ left: -60px; }
 .carousel-btn.right{ right: -60px; }
+@media (max-width: 768px){
 
+  /* 1 por vez no celular */
+  .project-card{
+    flex: 0 0 100%;
+    padding: .75rem;
+  }
+
+  .project-card img{
+    height: 180px;
+    border-radius: 16px;
+  }
+
+  /* setas DENTRO da tela */
+  .carousel-btn{
+    width: 42px;
+    height: 42px;
+    font-size: 1.7rem;
+  }
+
+  .carousel-btn.left{ left: 10px; }
+  .carousel-btn.right{ right: 10px; }
+
+  /* se quiser, evita zoom/seleção chata no toque */
+  .project-card, .carousel-btn{
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+}
+
+@media (max-width: 420px){
+  .project-card img{ height: 160px; }
+
+  .carousel-btn{
+    width: 38px;
+    height: 38px;
+    font-size: 1.5rem;
+  }
+
+  .carousel-btn.left{ left: 8px; }
+  .carousel-btn.right{ right: 8px; }
+}
 /* MODAL */
 .modal{
   position: fixed;
