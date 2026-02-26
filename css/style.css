@@ -309,7 +309,7 @@ section h3{
   }
 
   .project-card img{
-    height: 300px;
+    height: 350px;
     border-radius: 16px;
   }
 
@@ -331,7 +331,7 @@ section h3{
 }
 
 @media (max-width: 420px){
-  .project-card img{ height: 300px; }
+  .project-card img{ height: 350px; }
 
   .carousel-btn{
     width: 38px;
