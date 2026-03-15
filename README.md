@@ -10,7 +10,7 @@
 </ul>
 
 <h2>⚙️ Como acessa</h2>
-Basta clicar <a href="https://zallys2.github.io/portfoliogames/" >AQUI</a>
+Basta clicar <a href="https://zallys2.github.io/portfolioZ/" >AQUI</a>
 
 ## 💜 Projeto feito por Zally
 
