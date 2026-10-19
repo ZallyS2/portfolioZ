@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 120">
+<defs>
+<linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f1dca4"/><stop offset="1" stop-color="#c9a85f"/></linearGradient>
+<mask id="cut"><rect width="70" height="120" fill="#fff"/><polygon points="29,34 41,34 41,106 35,118 29,106" fill="#000"/></mask>
+</defs>
+<path mask="url(#cut)" fill="url(#g)" d="M8 42L35 40L63 42L62 48L64 53L48 71L51 73L30 90L66 90L65 96L67 102L5 102L6 95L4 90L12 90L28 73L26 70L45 53L9 53L10 47Z"/>
+<g fill="url(#g)">
+<circle cx="35" cy="8" r="3.4"/>
+<rect x="32.5" y="11" width="5" height="14" rx="1"/>
+<path d="M35 25C28 25 21 26 12 22C13 31 21 37 32 36L38 36C49 37 57 31 58 22C49 26 42 25 35 25Z"/>
+<path d="M32 36h6v68l-3 12-3-12z"/>
+</g>
+<g stroke="#8a7340" stroke-opacity=".5" stroke-width="1" fill="none" stroke-linecap="round">
+<path d="M32.8 14l4.4 2.2M32.8 18.5l4.4 2.2"/><path d="M35 40v62"/>
+</g>
+<path d="M59 90c-1.5-6 0-10-1-15" stroke="#c9a85f" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+<path d="M59 85c-4-1-6-4-6-4 4-1 6 1 6 4zM58.6 80c3-.5 5-3 5-3-3-1-5 1-5 3z" fill="#c9a85f"/>
+<g fill="#e6cf94"><circle cx="58" cy="69" r="2.8"/><circle cx="54.6" cy="72" r="2.6"/><circle cx="61.4" cy="72" r="2.6"/><circle cx="55.6" cy="66" r="2.4"/><circle cx="60.6" cy="66.4" r="2.4"/></g>
+<circle cx="58" cy="70" r="1.4" fill="#a88a45"/>
+</svg>

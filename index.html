@@ -4,154 +4,554 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Laila Zappiello | Zally</title>
+  <meta name="description" content="Portfólio de Laila Zappiello (Zally): Game Developer, Back-end e Game Design. Unity, C#, C++, .NET e Godot." />
+  <meta name="theme-color" content="#231446" />
 
+  <meta property="og:title" content="Laila Zappiello | Zally" />
+  <meta property="og:description" content="Game Developer • Back-end • Game Design" />
+  <meta property="og:image" content="assets/Ground.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Press+Start+2P&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="stylesheet" href="css/style.css">
-
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
-<header class="hero-new">
-  <div class="hero-banner">
-    <img src="assets/Ground.png" alt="Portfolio 2026 Game Dev">
+
+  <!-- Fundo animado -->
+  <div class="bg-parallax" aria-hidden="true">
+    <div class="bg-layer layer-stars"></div>
+    <div class="bg-layer layer-grid"></div>
+    <div class="bg-layer layer-glow"></div>
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+  </div>
+  <!-- Sabre de luz como barra de progresso -->
+  <div class="saber" aria-hidden="true">
+    <span class="hilt"></span>
+    <span class="blade" id="progress"></span>
   </div>
 
-  <div class="hero-overlay">
-    <h1>Laila Zappiello | Zally</h1>
-    <h2>Game Developer • Back-end • Game Design</h2>
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#inicio" class="nav-logo" aria-label="Zally - início">
+        <svg class="logo-mark" viewBox="0 0 70 120" aria-hidden="true"><use href="#i-zlogo"/></svg>
+        <span class="logo-text">Zally</span>
+      </a>
 
-    <div class="hero-actions">
-      <a href="https://github.com/ZallyS2" target="_blank" class="btn">GitHub</a>
-        
+      <nav class="nav-links" id="navLinks" aria-label="Principal">
+        <a href="#sobre">Sobre</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#jornada">Jornada</a>
+        <a href="#contato" class="nav-cta">Contato</a>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-  </div>
-</header>
+  </header>
 
-  <section class="about">
-    <h3>Sobre mim</h3>
-    <p>
-      Sou apaixonada por desenvolvimento e programação de jogos.
-      Trabalho com C++, C#, .NET, Game Design e criação de experiências
-      interativas que unem lógica e criatividade.
-    </p>
-  </section>
+  <main>
 
-  <section class="skills">
-    <h3>Habilidades</h3>
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="hero-text">
+        <p class="eyebrow reveal"><span class="pixel">&gt;</span> Olá, eu sou</p>
+        <h1 class="reveal">
+          Laila <span class="grad">Zappiello</span>
+          <small>Zally</small>
+        </h1>
+        <p class="hero-role reveal">
+          <span id="typed" aria-live="off"></span><span class="caret" aria-hidden="true"></span>
+        </p>
+        <p class="hero-lead reveal">
+          Crio jogos e sistemas que unem lógica e criatividade, do gameplay ao back-end.
+        </p>
 
-    <div class="skills-grid">
-      <span>Unity</span>
-      <span>C#</span>
-      <span>C++</span>
-      <span>.NET</span>
-      <span>Game Design</span>
-      <span>Back-end</span>
-    </div>
-  </section>
+        <p class="now-badge reveal">
+          <span class="dot" aria-hidden="true"></span>
+          Agora: <strong>Auxiliar de TI</strong> na Elgin
+        </p>
 
-  <section class="projects">
-    <h3>Projetos</h3>
-
-    <div class="carousel-container">
-      <button class="carousel-btn left" id="prev" aria-label="Anterior">&#10094;</button>
-
-      <div class="carousel">
-        <div class="carousel-track" id="track">
-
-
-											<div class="project-card"
-               data-title="TNT Basketball"
-               data-desc="Projeto desenvolvido em grupo durante o bootcamp da SoulCode para a TNT. Atuei no backend, integrando o Supabase para criar o sistema de ranking online e atualização das pontuações em tempo real."
-               data-tech="Unity • C# • Backend"
-               data-link="https://grupo-1.itch.io/tnt-basketball">
-                 <img src="assets/tnt.png" alt="c#">
-                <h4>TNT Basketball</h4>
-          </div>
-            <div class="project-card"
-               data-title="The Legend of Zally"
-               data-desc="Meu projeto principal, um RPG de ação inspirado em The Legend of Zelda. Desenvolvido em Unity, o jogo apresenta um mundo aberto com exploração, combate e resolução de puzzles. Estou no começo do desenvolvimento, mas o protótipo já está disponível no GitHub para quem quiser acompanhar a evolução do projeto."
-               data-tech="Unity • C# • Game Design"
-               data-link="https://github.com/ZallyS2/TLOZ">
-                 <img src="assets/tlozally.png" alt="c#">
-                <h4>The Legend of Zally</h4>
-          </div>
-          <div class="project-card"
-               data-title="Entre Laços e Amassos"
-               data-desc="Visual Novel focada em narrativa e escolhas do jogador. Eu atuei como assistente de desenvolvimento, contribuindo para a implementação de mecânicas e otimização do jogo. O projeto está disponível no Google Play e AppleStore."
-               data-tech="Unity • Game Design • Narrativa"
-               data-link="https://play.google.com/store/apps/details?id=br.com.entrelacoseamassos.dog&hl=pt">
-            <img src="assets/ELA.jpg" alt="Entre Laços e Amassos">
-            <h4>Entre Laços e Amassos</h4>
-          </div>
-
-          <div class="project-card"
-               data-title="My Little Farm"
-               data-desc="Jogo de fazenda com gerenciamento e progressão. Projetinho pessoal onde desenvolvi todas as mecânicas, desde o plantio até a colheita, além de criar um sistema de progressão para manter o jogador engajado. O código é aberto e disponível no GitHub."
-               data-tech="Unity • Game Design"
-               data-link="https://zallys2.itch.io/my-little-farm">
-            <img src="assets/mlf.png" alt="My Little Farm">
-            <h4>My Little Farm</h4>
-          </div>
-								<div class="project-card"
-               data-title="Pokedex"
-               data-desc="Pokedex feito em Angular."
-               data-tech="Angular"
-               data-link="https://poke-dex-zeta.vercel.app/">
-            <img src="assets/pokemon.jpg" alt="Pokedex">
-            <h4>Pokedex</h4>
-          </div>
-          <div class="project-card"
-               data-title="FPS Sci-Fi"
-               data-desc="Protótipo FPS futurista."
-               data-tech="Unity • FPS"
-               data-link="https://github.com/ZallyS2/FPS-SCI-Fi">
-            <img src="assets/fps.png" alt="FPS Sci-Fi">
-            <h4>FPS Sci-Fi</h4>
-          </div>
-
-          <div class="project-card"
-               data-title="Mocci"
-               data-desc="Protótipo na engine Godot."
-               data-tech="Godot"
-               data-link="https://github.com/ZallyS2/Mocchi">
-                 <img src="assets/Mocci.png" alt="Mocci">
-                <h4>Mocci</h4>
-          </div>
-
-           <div class="project-card"
-               data-title="Engine Java"
-               data-desc="Fiz esse projeto quando criança, foi meu primeiro contato com desenvolvimento de jogos. É uma engine simples feita em Java, onde é possível criar jogos 2D usando sprites e animações. O código é aberto e disponível no GitHub."
-               data-tech="Java"
-               data-link="https://github.com/ZallyS2/Game_Engine_A">
-                 <img src="assets/GEJ.png" alt="EngineJava">
-                <h4>Engine Java</h4>
-          </div>
-
-
-          <div class="project-card"
-               data-title="Projeto em Angular"
-               data-desc="Esse projeto é com sites em Angular"
-               data-tech="Angular"
-               data-link="https://portfolio-zallih.vercel.app/">
-                 <img src="assets/Angulaar.png" alt="Angular">
-                <h4>Projeto em Angular</h4>
-          </div>
-
-        <div class="project-card"
-               data-title="Projeto em C# Back-end"
-               data-desc="Todos os meus projetos de back-end em C#"
-               data-tech="C#"
-               data-link="https://github.com/ZallyS2/dio-projects/blob/main/README.md">
-                 <img src="assets/cc.png" alt="c#">
-                <h4>Projetos Back-end</h4>
-          </div>
+        <div class="hero-actions reveal">
+          <a href="#projetos" class="btn btn-primary">
+            Ver projetos
+            <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="https://github.com/ZallyS2" target="_blank" rel="noopener" class="btn btn-ghost">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            GitHub
+          </a>
         </div>
+
+        <!-- HUD estilo Zelda -->
+        <div class="hud reveal" aria-hidden="true">
+          <svg class="tri" viewBox="0 0 60 52"><use href="#triforce"/></svg>
+          <span class="hearts">
+            <svg viewBox="0 0 24 24"><use href="#heart"/></svg>
+            <svg viewBox="0 0 24 24"><use href="#heart"/></svg>
+            <svg viewBox="0 0 24 24"><use href="#heart"/></svg>
+            <svg viewBox="0 0 24 24"><use href="#heart"/></svg>
+            <svg viewBox="0 0 24 24" class="empty"><use href="#heart"/></svg>
+          </span>
+          <span class="rupee"><svg viewBox="0 0 24 24"><use href="#rupee"/></svg>×010</span>
+        </div>
+
+        <ul class="hero-stats reveal">
+          <li><strong data-count="10">0</strong><span>Projetos</span></li>
+          <li><strong data-count="4">0</strong><span>Experiências</span></li>
+          <li><strong data-count="4">0</strong><span>Formações</span></li>
+        </ul>
       </div>
 
-      <button class="carousel-btn right" id="next" aria-label="Próximo">&#10095;</button>
-    </div>
-  </section>
+      <div class="hero-art reveal">
+        <div class="art-frame">
+          <img src="assets/Ground.png" alt="Ilustração da Zally acenando ao lado de um notebook com Unity, controle de videogame e café" width="1536" height="1024" fetchpriority="high">
+        </div>
+        <span class="chip chip-1">Unity</span>
+        <span class="chip chip-2">C#</span>
+        <span class="chip chip-3">C++</span>
+        <span class="chip chip-4">Game Design</span>
+        <span class="spark s1" aria-hidden="true">✦</span>
+        <span class="spark s2" aria-hidden="true">✧</span>
+        <span class="spark s3" aria-hidden="true">✦</span>
+      </div>
 
+      <svg class="deco-planet" viewBox="0 0 64 64" aria-hidden="true"><use href="#i-prince"/></svg>
+
+      <a href="#sobre" class="scroll-hint" aria-label="Rolar para baixo">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="section" id="sobre">
+      <header class="section-head reveal">
+        <span class="section-num">01</span>
+        <h2>Sobre mim</h2>
+      </header>
+
+      <div class="about-grid">
+        <div class="dialog reveal">
+          <span class="dialog-name">Zally</span>
+          <p class="about-text">
+            Sou apaixonada por desenvolvimento e programação de jogos.
+            Trabalho com <strong>C++</strong>, <strong>C#</strong>, <strong>.NET</strong>,
+            Game Design e criação de experiências interativas que unem lógica e criatividade.
+            Atualmente também atuo como <strong>Auxiliar de TI na Elgin</strong>.
+          </p>
+          <span class="dialog-next" aria-hidden="true">▼</span>
+        </div>
+
+        <ul class="about-cards">
+          <li class="reveal">
+            <span class="about-ico">🎮</span>
+            <div>
+              <h3>Game Dev</h3>
+              <p>Mecânicas, sistemas e protótipos em Unity e Godot.</p>
+            </div>
+          </li>
+          <li class="reveal">
+            <span class="about-ico">⚙️</span>
+            <div>
+              <h3>Back-end</h3>
+              <p>APIs e serviços em C# / .NET, como o ranking online da TNT Basketball.</p>
+            </div>
+          </li>
+          <li class="reveal">
+            <span class="about-ico">✨</span>
+            <div>
+              <h3>Game Design</h3>
+              <p>Progressão, narrativa e puzzles pensados para engajar o jogador.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Coisas que eu amo -->
+      <div class="favs">
+        <h3 class="col-title reveal">Coisas que eu amo</h3>
+        <ul class="favs-grid">
+          <li class="fav fav-zelda reveal">
+            <svg class="fav-ico" viewBox="0 0 60 52" aria-hidden="true"><use href="#triforce"/></svg>
+            <strong>Zelda</strong>
+            <span>Aventura e exploração</span>
+          </li>
+          <li class="fav fav-sw reveal">
+            <svg class="fav-ico" viewBox="0 0 64 64" aria-hidden="true"><use href="#i-grogu"/></svg>
+            <strong>Star Wars</strong>
+            <span>May the Force be with you</span>
+          </li>
+          <li class="fav fav-prince reveal">
+            <svg class="fav-ico" viewBox="0 0 64 64" aria-hidden="true"><use href="#i-prince"/></svg>
+            <strong>O Pequeno Príncipe</strong>
+            <span>O essencial é invisível aos olhos</span>
+          </li>
+          <li class="fav fav-poke reveal">
+            <svg class="fav-ico" viewBox="0 0 64 64" aria-hidden="true"><use href="#i-pokeball"/></svg>
+            <strong>Pokémon</strong>
+            <span>Gotta catch 'em all!</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- HABILIDADES -->
+    <section class="section" id="habilidades">
+      <header class="section-head reveal">
+        <span class="section-num">02</span>
+        <h2>Habilidades</h2>
+      </header>
+
+      <div class="skills-groups">
+        <div class="skill-group reveal">
+          <h3>Engines &amp; Design</h3>
+          <ul>
+            <li><b>U</b>Unity</li>
+            <li><b>G</b>Godot</li>
+            <li><b>GD</b>Game Design</li>
+          </ul>
+        </div>
+
+        <div class="skill-group reveal">
+          <h3>Linguagens</h3>
+          <ul>
+            <li><b>C#</b>C#</li>
+            <li><b>C++</b>C++</li>
+            <li><b>J</b>Java</li>
+          </ul>
+        </div>
+
+        <div class="skill-group reveal">
+          <h3>Web &amp; Back-end</h3>
+          <ul>
+            <li><b>.N</b>.NET</li>
+            <li><b>BE</b>Back-end</li>
+            <li><b>A</b>Angular</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJETOS -->
+    <section class="section" id="projetos">
+      <header class="section-head reveal">
+        <span class="section-num">03</span>
+        <h2>Projetos</h2>
+      </header>
+
+      <div class="filters reveal" role="group" aria-label="Filtrar projetos">
+        <button class="filter active" data-filter="all">Todos</button>
+        <button class="filter" data-filter="unity">Unity</button>
+        <button class="filter" data-filter="backend">Back-end</button>
+        <button class="filter" data-filter="web">Web</button>
+        <button class="filter" data-filter="outros">Outros</button>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid">
+
+        <article class="project-card" tabindex="0" role="button" data-cat="unity"
+                 data-title="The Legend of Zally"
+                 data-desc="Meu projeto principal, um RPG de ação inspirado em The Legend of Zelda. Desenvolvido em Unity, o jogo apresenta um mundo aberto com exploração, combate e resolução de puzzles. Estou no começo do desenvolvimento, mas o protótipo já está disponível no GitHub para quem quiser acompanhar a evolução do projeto."
+                 data-tech="Unity • C# • Game Design"
+                 data-link="https://github.com/ZallyS2/TLOZ"
+                 data-featured="Em desenvolvimento">
+          <div class="card-media"><img src="assets/tlozally.png" alt="The Legend of Zally" loading="lazy" decoding="async"></div>
+          <div class="card-body"><h4>The Legend of Zally</h4></div>
+        </article>
+
+        <article class="project-card" tabindex="0" role="button" data-cat="unity backend"
+                 data-title="TNT Basketball"
+                 data-desc="Projeto desenvolvido em grupo durante o bootcamp da SoulCode para a TNT. Atuei no backend, integrando o Supabase para criar o sistema de ranking online e atualização das pontuações em tempo real."
+                 data-tech="Unity • C# • Backend"
+                 data-link="https://grupo-1.itch.io/tnt-basketball">
+          <div class="card-media"><img src="assets/tnt.png" alt="TNT Basketball" loading="lazy" decoding="async"></div>
+          <div class="card-body"><h4>TNT Basketball</h4></div>
+        </article>
+
+        <article class="project-card" tabindex="0" role="button" data-cat="unity"
+                 data-title="Entre Laços e Amassos"
+                 data-desc="Visual Novel focada em narrativa e escolhas do jogador. Eu atuei como assistente de desenvolvimento, contribuindo para a implementação de mecânicas e otimização do jogo. O projeto está disponível no Google Play e AppleStore."
+                 data-tech="Unity • Game Design • Narrativa"
+                 data-link="https://play.google.com/store/apps/details?id=br.com.entrelacoseamassos.dog&hl=pt">
+          <div class="card-media"><img src="assets/ELA.jpg" alt="Entre Laços e Amassos" loading="lazy" decoding="async"></div>
+          <div class="card-body"><h4>Entre Laços e Amassos</h4></div>
+        </article>
+
+        <article class="project-card" tabindex="0" role="button" data-cat="unity"
+                 data-title="My Little Farm"
+                 data-desc="Jogo de fazenda com gerenciamento e progressão. Projetinho pessoal onde desenvolvi todas as mecânicas, desde o plantio até a colheita, além de criar um sistema de progressão para manter o jogador engajado. O código é aberto e disponível no GitHub."
+                 data-tech="Unity • Game Design"
+                 data-link="https://zallys2.itch.io/my-little-farm">
+          <div class="card-media"><img src="assets/mlf.png" alt="My Little Farm" loading="lazy" decoding="async"></div>
+          <div class="card-body"><h4>My Little Farm</h4></div>
+        </article>
+
+        <article class="project-card" tabindex="0" role="button" data-cat="unity"
+                 data-title="FPS Sci-Fi"
+                 data-desc="Protótipo FPS futurista."
+                 data-tech="Unity • FPS"
+                 data-link="https://github.com/ZallyS2/FPS-SCI-Fi">
+          <div class="card-media"><img src="assets/fps.png" alt="FPS Sci-Fi" loading="lazy" decoding="async"></div>
+          <div class="card-body"><h4>FPS Sci-Fi</h4></div>
+        </article>
+
+        <article class="project-card" tabindex="0" role="button" data-cat="outros"
+                 data-title="Mocci"
+                 data-desc="Protótipo na engine Godot."
+                 data-tech="Godot"
+                 data-link="https://github.com/ZallyS2/Mocchi">
+          <div class="card-media"><img src="assets/Mocci.png" alt="Mocci" loading="lazy" decoding="async"></div>
+          <div class="card-body"><h4>Mocci</h4></div>
+        </article>
+
+        <article class="project-card" tabindex="0" role="button" data-cat="outros"
+                 data-title="Engine Java"
+                 data-desc="Fiz esse projeto quando criança, foi meu primeiro contato com desenvolvimento de jogos. É uma engine simples feita em Java, onde é possível criar jogos 2D usando sprites e animações. O código é aberto e disponível no GitHub."
+                 data-tech="Java"
+                 data-link="https://github.com/ZallyS2/Game_Engine_A">
+          <div class="card-media"><img src="assets/GEJ.png" alt="Engine Java" loading="lazy" decoding="async"></div>
+          <div class="card-body"><h4>Engine Java</h4></div>
+        </article>
+
+        <article class="project-card" tabindex="0" role="button" data-cat="web"
+                 data-title="Pokedex"
+                 data-desc="Pokedex feito em Angular."
+                 data-tech="Angular"
+                 data-link="https://poke-dex-zeta.vercel.app/">
+          <div class="card-media"><img src="assets/pokemon.jpg" alt="Pokedex" loading="lazy" decoding="async"></div>
+          <div class="card-body"><h4>Pokedex</h4></div>
+        </article>
+
+        <article class="project-card" tabindex="0" role="button" data-cat="web"
+                 data-title="Projeto em Angular"
+                 data-desc="Esse projeto é com sites em Angular"
+                 data-tech="Angular"
+                 data-link="https://portfolio-zallih.vercel.app/">
+          <div class="card-media"><img src="assets/Angulaar.png" alt="Projeto em Angular" loading="lazy" decoding="async"></div>
+          <div class="card-body"><h4>Projeto em Angular</h4></div>
+        </article>
+
+        <article class="project-card" tabindex="0" role="button" data-cat="backend"
+                 data-title="Projetos Back-end"
+                 data-desc="Todos os meus projetos de back-end em C#"
+                 data-tech="C# • .NET • Back-end"
+                 data-link="https://github.com/ZallyS2/dio-projects/blob/main/README.md">
+          <div class="card-media"><img src="assets/cc.png" alt="Projetos Back-end em C#" loading="lazy" decoding="async"></div>
+          <div class="card-body"><h4>Projetos Back-end</h4></div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- JORNADA -->
+    <section class="section" id="jornada">
+      <header class="section-head reveal">
+        <span class="section-num">04</span>
+        <h2>Minha jornada</h2>
+      </header>
+
+      <div class="journey">
+        <div class="timeline-col">
+          <h3 class="col-title reveal">Educação</h3>
+          <ol class="timeline">
+            <li class="reveal">
+              <span class="tl-period">2026</span>
+              <h4>Bootcamp em Desenvolvimento de Jogos</h4>
+              <p>Soulcode</p>
+            </li>
+            <li class="reveal">
+              <span class="tl-period">2025 – 2029</span>
+              <h4>Ciência da Computação</h4>
+              <p>Estácio</p>
+            </li>
+            <li class="reveal">
+              <span class="tl-period">2022 – 2024</span>
+              <h4>Técnico em Eletrônica</h4>
+              <p>ETEC</p>
+            </li>
+            <li class="reveal">
+              <span class="tl-period">2022 – 2024</span>
+              <h4>Ensino Médio</h4>
+              <p>ETEC</p>
+            </li>
+          </ol>
+        </div>
+
+        <div class="timeline-col">
+          <h3 class="col-title reveal">Experiências</h3>
+          <ol class="timeline">
+            <li class="reveal is-current">
+              <span class="tl-period">10/2026 – Atual</span>
+              <h4>Auxiliar de TI</h4>
+              <p>Elgin</p>
+            </li>
+            <li class="reveal">
+              <span class="tl-period">10/2025 – 02/2026</span>
+              <h4>Game Developer (Freelance)</h4>
+              <p>Doguinho Studios</p>
+            </li>
+            <li class="reveal">
+              <span class="tl-period">04/2025 – 10/2025</span>
+              <h4>Game Dev &amp; Game Design (Voluntário)</h4>
+              <p>Instal</p>
+            </li>
+            <li class="reveal">
+              <span class="tl-period">04/2025 – 07/2025</span>
+              <h4>Jovem Aprendiz Administrativo</h4>
+              <p>Grupo Vamos</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="section" id="contato">
+      <div class="contact-card reveal">
+        <span class="section-num">05</span>
+        <h2>Vamos conversar?</h2>
+        <p>Quer conversar, colaborar ou saber mais sobre meu trabalho? Me chama por aqui ✨</p>
+
+        <div class="contact-links">
+          
+          <a href="https://wa.me/5511981642627" target="_blank" rel="noopener" class="contact-link">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            WhatsApp
+          </a>
+          <a href="https://www.linkedin.com/in/laila-zappiello/" target="_blank" rel="noopener" class="contact-link">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+          <a href="https://www.instagram.com/zappiello.o/" target="_blank" rel="noopener" class="contact-link">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            Instagram
+          </a>
+          <a href="https://github.com/ZallyS2" target="_blank" rel="noopener" class="contact-link">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            GitHub
+          </a>
+        </div>
+
+        <p class="prince-quote">
+          <span aria-hidden="true">✦</span>
+          “O essencial é invisível aos olhos.”
+          <small>O Pequeno Príncipe</small>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>Feito com 💜 por <strong>Zally</strong> · 2026</p>
+
+    <button class="grogu" id="grogu" aria-label="Clique no Grogu para ouvir uma frase">
+      <span class="grogu-bubble" id="groguBubble">May the Force be with you ✨</span>
+      <svg viewBox="0 0 120 120" aria-hidden="true">
+        <!-- orelhas -->
+        <path d="M38 54C16 40 3 50 8 63c4 10 22 7 32 0z" fill="#b8d99b"/>
+        <path d="M82 54c22-14 35-4 30 9-4 10-22 7-32 0z" fill="#b8d99b"/>
+        <path d="M34 55c-11-7-20-3-18 4 2 5 12 4 20 0z" fill="#f2b8a8"/>
+        <path d="M86 55c11-7 20-3 18 4-2 5-12 4-20 0z" fill="#f2b8a8"/>
+        <!-- túnica -->
+        <path d="M34 112c0-20 8-32 26-32s26 12 26 32z" fill="#e3c6a4"/>
+        <path d="M60 80v32M46 90l14 8 14-8" stroke="#c9a47c" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <!-- cabeça -->
+        <ellipse cx="60" cy="56" rx="27" ry="25" fill="#c5e3a8"/>
+        <path d="M44 34c4-5 28-5 32 0" stroke="#a9cf88" stroke-width="3" fill="none" stroke-linecap="round" opacity=".7"/>
+        <!-- olhos -->
+        <ellipse cx="49" cy="58" rx="7" ry="8.5" fill="#2a1650"/>
+        <ellipse cx="71" cy="58" rx="7" ry="8.5" fill="#2a1650"/>
+        <circle cx="46.5" cy="55" r="2.6" fill="#fff"/><circle cx="68.5" cy="55" r="2.6" fill="#fff"/>
+        <!-- nariz e boca -->
+        <circle cx="58" cy="68" r="1" fill="#8fb872"/><circle cx="62" cy="68" r="1" fill="#8fb872"/>
+        <path d="M54 72q6 4 12 0" stroke="#8fb872" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <!-- bochechas -->
+        <circle cx="41" cy="68" r="4" fill="#f9a8d4" opacity=".45"/><circle cx="79" cy="68" r="4" fill="#f9a8d4" opacity=".45"/>
+      </svg>
+    </button>
+
+    <a href="#inicio" class="to-top">
+      <svg class="ball" viewBox="0 0 64 64" aria-hidden="true"><use href="#i-pokeball"/></svg>
+      Voltar ao topo
+    </a>
+  </footer>
+
+  <!-- Ícones reutilizáveis (homenagens visuais) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <g id="triforce"><polygon points="30,2 44,26 16,26"/><polygon points="16,28 30,50 2,50"/><polygon points="44,28 58,50 30,50"/></g>
+      <path id="heart" d="M12 21s-8.5-5.4-8.5-11.2A4.6 4.6 0 0 1 12 7.3a4.6 4.6 0 0 1 8.5 2.5C20.5 15.6 12 21 12 21z"/>
+      <path id="rupee" d="M12 2l6 7-6 13L6 9z"/>
+
+      <!-- Logo: Z com espada (homenagem a Zelda) -->
+      <symbol id="i-zlogo" viewBox="0 0 70 120">
+        <defs>
+<linearGradient id="zg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f1dca4"/><stop offset="1" stop-color="#c9a85f"/></linearGradient>
+<mask id="zcut"><rect width="70" height="120" fill="#fff"/><polygon points="29,34 41,34 41,106 35,118 29,106" fill="#000"/></mask>
+        </defs>
+<path mask="url(#zcut)" fill="url(#zg)" d="M8 42L35 40L63 42L62 48L64 53L48 71L51 73L30 90L66 90L65 96L67 102L5 102L6 95L4 90L12 90L28 73L26 70L45 53L9 53L10 47Z"/>
+<g fill="url(#zg)">
+<circle cx="35" cy="8" r="3.4"/>
+<rect x="32.5" y="11" width="5" height="14" rx="1"/>
+<path d="M35 25C28 25 21 26 12 22C13 31 21 37 32 36L38 36C49 37 57 31 58 22C49 26 42 25 35 25Z"/>
+<path d="M32 36h6v68l-3 12-3-12z"/>
+</g>
+<g stroke="#8a7340" stroke-opacity=".5" stroke-width="1" fill="none" stroke-linecap="round">
+<path d="M32.8 14l4.4 2.2M32.8 18.5l4.4 2.2"/><path d="M35 40v62"/>
+</g>
+<path d="M59 90c-1.5-6 0-10-1-15" stroke="#c9a85f" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+<path d="M59 85c-4-1-6-4-6-4 4-1 6 1 6 4zM58.6 80c3-.5 5-3 5-3-3-1-5 1-5 3z" fill="#c9a85f"/>
+<g fill="#e6cf94"><circle cx="58" cy="69" r="2.8"/><circle cx="54.6" cy="72" r="2.6"/><circle cx="61.4" cy="72" r="2.6"/><circle cx="55.6" cy="66" r="2.4"/><circle cx="60.6" cy="66.4" r="2.4"/></g>
+<circle cx="58" cy="70" r="1.4" fill="#a88a45"/>
+      </symbol>
+
+      <!-- Pokébola -->
+      <symbol id="i-pokeball" viewBox="0 0 64 64">
+        <circle cx="32" cy="32" r="28" fill="#fff"/>
+        <path d="M4 32a28 28 0 0 1 56 0z" fill="#ff8fa3"/>
+        <path d="M4 32h56" stroke="#2a1650" stroke-width="5"/>
+        <circle cx="32" cy="32" r="28" fill="none" stroke="#2a1650" stroke-width="4"/>
+        <circle cx="32" cy="32" r="9" fill="#fff" stroke="#2a1650" stroke-width="4"/>
+      </symbol>
+
+      <!-- Grogu (só a carinha) -->
+      <symbol id="i-grogu" viewBox="0 0 64 64">
+        <path d="M17 30C5 22 0 28 2 35c2 6 12 4 19 0z" fill="#b8d99b"/>
+        <path d="M47 30c12-8 17-2 15 5-2 6-12 4-19 0z" fill="#b8d99b"/>
+        <path d="M15 32c-6-3-10-2-9 2 1 2 6 2 10 0z" fill="#f2b8a8"/>
+        <path d="M49 32c6-3 10-2 9 2-1 2-6 2-10 0z" fill="#f2b8a8"/>
+        <ellipse cx="32" cy="34" rx="17" ry="16" fill="#c5e3a8"/>
+        <ellipse cx="25.5" cy="36" rx="4.5" ry="5.5" fill="#2a1650"/>
+        <ellipse cx="38.5" cy="36" rx="4.5" ry="5.5" fill="#2a1650"/>
+        <circle cx="24" cy="34" r="1.6" fill="#fff"/><circle cx="37" cy="34" r="1.6" fill="#fff"/>
+        <path d="M28 43q4 3 8 0" stroke="#8fb872" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+        <path d="M16 54c2-8 8-10 16-10s14 2 16 10z" fill="#e3c6a4"/>
+      </symbol>
+
+      <!-- Asteroide B-612 com a rosa sob a redoma e o pequeno príncipe -->
+      <symbol id="i-prince" viewBox="0 0 64 64">
+        <circle cx="8" cy="10" r="1.4" fill="#fde68a"/><circle cx="56" cy="8" r="1.8" fill="#fff"/>
+        <circle cx="58" cy="30" r="1.2" fill="#fde68a"/><circle cx="6" cy="34" r="1.2" fill="#fff"/>
+        <circle cx="32" cy="52" r="20" fill="#f9d6a5"/>
+        <circle cx="42" cy="58" r="4" fill="#eebd85"/><circle cx="22" cy="60" r="3" fill="#eebd85"/>
+        <path d="M20 33C20 10 40 10 40 33z" fill="#fff" fill-opacity=".14" stroke="#fff" stroke-width="1.4"/>
+        <path d="M30 33v-9" stroke="#8fd3a8" stroke-width="2" stroke-linecap="round"/>
+        <path d="M30 29c-4 0-5-3-5-3 3 0 5 1 5 3zM30 27c3 0 5-2 5-2-3-1-5 0-5 2z" fill="#8fd3a8"/>
+        <circle cx="30" cy="20" r="4.6" fill="#ff8fa3"/><circle cx="30" cy="20" r="2" fill="#ffb3c4"/>
+        <circle cx="49" cy="28" r="3" fill="#fde68a"/>
+        <rect x="47" y="31" width="4" height="7" rx="1.5" fill="#a9d8ff"/>
+        <path d="M47 32c-5-1-8 2-10 1 4 3 8 1 10 3z" fill="#fde68a"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- MODAL -->
   <div class="modal" id="modal" aria-hidden="true">
     <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
       <button class="close" aria-label="Fechar">&times;</button>
@@ -160,109 +560,18 @@
         <img id="modalImage" src="" alt="">
       </div>
 
-      <h3 id="modalTitle"></h3>
-      <p id="modalDesc"></p>
-      <span id="modalTech"></span>
-      <br>
-      <a id="modalLink" target="_blank" rel="noopener">Ver projeto</a>
+      <div class="modal-body">
+        <h3 id="modalTitle"></h3>
+        <div class="modal-tags" id="modalTech"></div>
+        <p id="modalDesc"></p>
+        <a id="modalLink" class="btn btn-primary" target="_blank" rel="noopener">
+          Ver projeto
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </div>
     </div>
   </div>
 
-  
-<section class="education">
-  <h3>Educação</h3>
-
-  <ul class="education-list">
-    <li>
-      <div class="edu-info">
-        <span class="edu-title">Ensino Médio</span>
-        <span class="edu-place">ETEC</span>
-      </div>
-      <span class="edu-period">2022 – 2024</span>
-    </li>
-
-    <li>
-      <div class="edu-info">
-        <span class="edu-title">Técnico em Eletrônica</span>
-        <span class="edu-place">ETEC</span>
-      </div>
-      <span class="edu-period">2022 – 2024</span>
-    </li>
-
-    <li>
-      <div class="edu-info">
-        <span class="edu-title">Ciência da Computação</span>
-        <span class="edu-place">Estácio</span>
-      </div>
-      <span class="edu-period">2025 – 2029</span>
-    </li>
-
-    <li>
-      <div class="edu-info">
-        <span class="edu-title">Bootcamp em Desenvolvimento de Jogos</span>
-        <span class="edu-place">Soulcode</span>
-      </div>
-      <span class="edu-period">2026</span>
-    </li>
-  </ul>
-</section>
-
-<section class="experience">
-  <h3>Experiências</h3>
-
-  <div class="experience-table">
-    <div class="exp-row exp-head">
-      <span>Cargo</span>
-      <span>Empresa</span>
-      <span>Tempo</span>
-    </div>
-
-    <div class="exp-row">
-      <span>Jovem Aprendiz Administrativo</span>
-      <span>Grupo Vamos</span>
-      <span>04/2025 – 07/2025</span>
-    </div>
-
-    <div class="exp-row">
-      <span>Game Dev & Game Design (Voluntário)</span>
-      <span>Instal</span>
-      <span>04/2025 – 10/2025</span>
-    </div>
-
-    <div class="exp-row">
-      <span>Game Developer (Freelance)</span>
-      <span>Doguinho Studios</span>
-      <span>10/2025 – 02/2026</span>
-    </div>
-  </div>
-</section>
-
-<section class="contact">
-  <h3>Entre em contato</h3>
-
-  <p class="contact-text">
-    Quer conversar, colaborar ou saber mais sobre meu trabalho?
-    Me chama por aqui ✨
-  </p>
-
-  <div class="contact-links">
-    <a href="https://www.instagram.com/zzappiello.o/" target="_blank">
-      <img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram">
-    </a>
-
-    <a href="mailto:lailazappiello90@gmail.com">
-      <img src="https://img.shields.io/badge/Gmail-333333?style=for-the-badge&logo=gmail&logoColor=red" alt="Gmail">
-    </a>
-
-    <a href="https://wa.me/5511981642627" target="_blank">
-      <img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp">
-    </a>
-
-    <a href="https://www.linkedin.com/in/laila-zappiello/" target="_blank">
-      <img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
-    </a>
-  </div>
-</section>
   <script src="js/script.js"></script>
 </body>
 </html>
